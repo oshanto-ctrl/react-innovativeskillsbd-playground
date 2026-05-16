@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Faculty+Glyphic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <title>Aviato</title>
+
+    
+</head>
+<body class="faculty-neue-regular">
+    <!-- Header Section -->
+     <header class="flex justify-between items-center w-3/4 mx-auto py-10 border-b">
+        <!-- 3 main box -->
+         <!-- Phone number  -->
+        <div class="flex items-center m-2 gap-1 text-sm">
+            <!-- phone icon & number -->
+            <span class="material-symbols-outlined">
+                call
+            </span>
+            <span> 0129- 12323-123123</span>
+        </div>
+        
+        <!-- Main Heading -->
+        <div class="m-2 text-4xl font-bold">
+            <h2>AVIATO</h2>
+        </div>
+        
+        <!-- Cart, Search Language Options -->
+        <div class="m-2 flex gap-2 items-center text-sm">
+            <div class="flex items-center gap-1">
+                <!-- Cart Icon -->
+                 <span class="material-symbols-outlined"> 
+                    shopping_cart 
+                </span>
+                <span>Cart</span>
+            </div>
+            <div class="flex items-center gap-1">
+                <!-- Search Icon -->
+                 <span class="material-symbols-outlined">
+                    search
+                 </span>
+                <span>Search</span>
+            </div>
+            <div class="flex items-center gap-1">
+                <!--  Language Dropdown -->
+                 <select>
+                    <option value="english">EN</option>
+                    <option value="bangla">BN</option>
+                 </select>
+            </div>
+        </div>
+     </header>
+
+     <!-- Navigation Section -->
+      <nav class="flex items-center justify-center py-10 gap-5">
+        <!-- Home -->
+        <div>
+            <a href="#" class="text-sm font-light uppercase"><span>Home</span></a>
+        </div>
+        <!-- Shop -->
+        <div class="group relative">
+            <a href="#" class="text-sm font-light uppercase px-2 py-2"><span>Shop</span></a>
+            <div class=" flex-col hidden group-hover:flex absolute">
+                <a class="px-2 py-2 whitespace-nowrap text-sm" href="#">Sub Menu</a>
+                <a class="px-2 py-2 whitespace-nowrap text-sm" href="#">Sub Menu</a>
+                <a class="px-2 py-2 whitespace-nowrap text-sm" href="#">Sub Menu</a>
+                <a class="px-2 py-2 whitespace-nowrap text-sm" href="#">Sub Menu</a>
+            </div>
+        </div>
+        <!-- Pages -->
+        <div class="group relative">
+            <a href="#" class="text-sm font-light uppercase px-2 py-2"><span>Pages</span></a>
+            <div class="hidden group-hover:flex flex-col absolute">
+                <a  class="px-2 py-2 whitespace-nowrap text-sm" href="#">Sub Menu</a>
+                <a  class="px-2 py-2 whitespace-nowrap text-sm" href="#">Sub Menu</a>
+                <a  class="px-2 py-2 whitespace-nowrap text-sm" href="#">Sub Menu</a>
+                <a  class="px-2 py-2 whitespace-nowrap text-sm" href="#">Sub Menu</a>
+            </div>
+        </div>
+        <!-- Blogs -->
+        <div class="group relative">
+            <a href="#" class="text-sm font-light uppercase py-2 px-2"><span>Blog</span></a>
+            <div class="hidden group-hover:flex flex-col absolute">
+                <a  class="px-2 py-2 whitespace-nowrap text-sm" href="#">Sub Menu</a>
+                <a  class="px-2 py-2 whitespace-nowrap text-sm" href="#">Sub Menu</a>
+                <a  class="px-2 py-2 whitespace-nowrap text-sm" href="#">Sub Menu</a>
+                <a  class="px-2 py-2 whitespace-nowrap text-sm" href="#">Sub Menu</a>
+            </div>
+        </div>
+        <!-- Elements -->
+        <div class="group relative">
+            <a href="#" class="text-sm font-light uppercase px-2 py-2"><span>Elements</span></a>
+            <div class="hidden group-hover:flex flex-col absolute">
+                <a  class="px-2 py-2 whitespace-nowrap text-sm" href="#">Sub Menu</a>
+                <a  class="px-2 py-2 whitespace-nowrap text-sm" href="#">Sub Menu</a>
+                <a  class="px-2 py-2 whitespace-nowrap text-sm" href="#">Sub Menu</a>
+                <a  class="px-2 py-2 whitespace-nowrap text-sm" href="#">Sub Menu</a>
+            </div>
+        </div>
+
+      </nav>
+    
+</body>
+</html>
