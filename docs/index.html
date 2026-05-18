@@ -1,132 +1,399 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Faculty+Glyphic&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    
-    <link rel="stylesheet" href="css/styles.css">
-    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Faculty+Glyphic&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+
     <title>Aviato</title>
+  </head>
+  <body class="faculty-neue-regular flex flex-col">
+    <!-- Header Section STARTS -->
+    <header
+      class="flex justify-between items-center w-3/4 mx-auto py-10 border-b"
+    >
+      <!-- 3 main box -->
+      <!-- Phone number  -->
+      <div class="flex items-center m-2 gap-1 text-sm">
+        <!-- phone icon & number -->
+        <span class="material-symbols-outlined"> call </span>
+        <span> 069- 6323-6363</span>
+      </div>
 
-    
-</head>
-<body class="faculty-neue-regular">
-    <!-- Header Section -->
-     <header class="flex justify-between items-center w-3/4 mx-auto py-10 border-b">
-        <!-- 3 main box -->
-         <!-- Phone number  -->
-        <div class="flex items-center m-2 gap-1 text-sm">
-            <!-- phone icon & number -->
-            <span class="material-symbols-outlined">
-                call
-            </span>
-            <span> 0129- 12323-123123</span>
-        </div>
-        
-        <!-- Main Heading -->
-        <div class="m-2 text-4xl font-bold">
-            <h2>AVIATO</h2>
-        </div>
-        
-        <!-- Cart, Search Language Options -->
-        <div class="m-2 flex gap-2 items-center text-sm">
-            <div class="flex items-center gap-1">
-                <!-- Cart Icon -->
-                 <span class="material-symbols-outlined"> 
-                    shopping_cart 
-                </span>
-                <span>Cart</span>
-            </div>
-            <div class="flex items-center gap-1">
-                <!-- Search Icon -->
-                 <span class="material-symbols-outlined">
-                    search
-                 </span>
-                <span>Search</span>
-            </div>
-            <div class="flex items-center gap-1">
-                <!--  Language Dropdown -->
-                 <select>
-                    <option value="english">EN</option>
-                    <option value="bangla">BN</option>
-                 </select>
-            </div>
-        </div>
-     </header>
+      <!-- Main Heading -->
+      <div class="m-2 text-4xl font-bold">
+        <h2>AVIATO</h2>
+      </div>
 
-     <!-- Navigation Section -->
-      <nav class="flex items-center justify-center py-10 gap-5">
-        <!-- Home -->
-        <div>
-            <a href="#" class="text-sm font-light uppercase"><span>Home</span></a>
+      <!-- Cart, Search Language Options -->
+      <div class="m-2 flex gap-2 items-center text-sm">
+        <div class="flex items-center gap-1">
+          <!-- Cart Icon -->
+          <span class="material-symbols-outlined"> shopping_cart </span>
+          <span>Cart</span>
         </div>
-        <!-- Shop -->
-        <div class="group relative">
-            <a href="#" class="text-sm font-light uppercase px-2 py-2"><span>Shop</span></a>
-            <div class="hidden group-hover:flex flex-col absolute border border-gray-100">
-               <div class="flex flex-row gap-3 relative">
-                 <!-- Pages -->
-                <div class="flex flex-col">
-                    <span class="text-sm font-light text-gray-600 border-b border-gray-300 p-2">Pages</span>
-                <div class=" font-light py-2">
-                    <a class="px-2 py-2 whitespace-nowrap text-sm uppercase" href="#">Shop</a>
-                    <a class="px-2 py-2 whitespace-nowrap text-sm uppercase" href="#">Checkout</a>
-                    <a class="px-2 py-2 whitespace-nowrap text-sm uppercase" href="#">Cart</a>
-                    <a class="px-2 py-2 whitespace-nowrap text-sm uppercase" href="#">Pricing</a>
-                    <a class="px-2 py-2 whitespace-nowrap text-sm uppercase" href="#">Confirmation</a>
+        <div class="flex items-center gap-1">
+          <!-- Search Icon -->
+          <span class="material-symbols-outlined"> search </span>
+          <span>Search</span>
+        </div>
+        <div class="flex items-center gap-1">
+          <!--  Language Dropdown -->
+          <select>
+            <option value="english">EN</option>
+            <option value="bangla">BN</option>
+          </select>
+        </div>
+      </div>
+    </header>
+    <!-- Header Section ENDS -->
+
+    <!-- NAV STARTS -->
+    <nav class="flex items-center justify-center py-10 gap-5">
+      <!-- Home -->
+      <div>
+        <a href="#" class="text-sm font-light uppercase"><span>Home</span></a>
+      </div>
+      <!-- Shop -->
+      <div class="group relative">
+        <a href="#" class="text-sm font-light uppercase px-2 py-2"
+          ><span>Shop</span></a
+        >
+        <div
+          class="hidden group-hover:flex flex-col absolute left-1/2 transform -translate-x-1/2 border border-gray-100"
+        >
+          <div class="flex flex-row gap-3 relative">
+            <!-- Pages -->
+            <div class="flex flex-col">
+              <span
+                class="text-sm font-light text-gray-600 border-b border-gray-300 p-2"
+                >Pages</span
+              >
+              <div class="font-light py-2">
+                <a
+                  class="px-2 py-2 whitespace-nowrap text-sm uppercase"
+                  href="#"
+                  >Shop</a
+                >
+                <a
+                  class="px-2 py-2 whitespace-nowrap text-sm uppercase"
+                  href="#"
+                  >Checkout</a
+                >
+                <a
+                  class="px-2 py-2 whitespace-nowrap text-sm uppercase"
+                  href="#"
+                  >Cart</a
+                >
+                <a
+                  class="px-2 py-2 whitespace-nowrap text-sm uppercase"
+                  href="#"
+                  >Pricing</a
+                >
+                <a
+                  class="px-2 py-2 whitespace-nowrap text-sm uppercase"
+                  href="#"
+                  >Confirmation</a
+                >
+              </div>
+            </div>
+            <!-- Layout -->
+            <div class="flex flex-col">
+              <span
+                class="text-sm font-light text-gray-600 border-b border-gray-300 p-2"
+                >Layout</span
+              >
+              <div class="font-light py-2">
+                <a
+                  class="px-2 py-2 whitespace-nowrap text-sm uppercase"
+                  href="#"
+                  >product details</a
+                >
+                <a
+                  class="px-2 py-2 whitespace-nowrap text-sm uppercase"
+                  href="#"
+                  >shop with sidebar</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- PAGES -->
+      <div class="group relative">
+        <a href="#" class="text-sm font-light uppercase px-2 py-2"
+          ><span>Pages</span></a
+        >
+        <div
+          class="hidden group-hover:flex flex-col absolute left-1/2 transform -translate-x-1/2 border border-gray-100"
+        >
+          <div class="flex flex-row gap-3 relative">
+            <!-- Introduction -->
+            <div class="flex flex-col">
+              <span
+                class="text-sm font-light text-gray-600 border-b border-gray-300 p-2"
+                >Introduction</span
+              >
+              <div class="font-light py-2">
+                <a
+                  class="px-2 py-2 whitespace-nowrap text-sm uppercase"
+                  href="#"
+                  >Shop</a
+                >
+                <a
+                  class="px-2 py-2 whitespace-nowrap text-sm uppercase"
+                  href="#"
+                  >Checkout</a
+                >
+                <a
+                  class="px-2 py-2 whitespace-nowrap text-sm uppercase"
+                  href="#"
+                  >Cart</a
+                >
+                <a
+                  class="px-2 py-2 whitespace-nowrap text-sm uppercase"
+                  href="#"
+                  >Pricing</a
+                >
+                <a
+                  class="px-2 py-2 whitespace-nowrap text-sm uppercase"
+                  href="#"
+                  >Confirmation</a
+                >
+              </div>
+            </div>
+            <!-- Dashboard -->
+            <div class="flex flex-col">
+              <span
+                class="text-sm font-light text-gray-600 border-b border-gray-300 p-2"
+                >Dashboard</span
+              >
+              <div class="font-light py-2">
+                <a
+                  class="px-2 py-2 whitespace-nowrap text-sm uppercase"
+                  href="#"
+                  >product details</a
+                >
+                <a
+                  class="px-2 py-2 whitespace-nowrap text-sm uppercase"
+                  href="#"
+                  >shop with sidebar</a
+                >
+              </div>
+            </div>
+            <!-- Utility -->
+            <div class="flex flex-col">
+              <span
+                class="text-sm font-light text-gray-600 border-b border-gray-300 p-2"
+                >Utility</span
+              >
+              <div class="font-light py-2">
+                <a
+                  class="px-2 py-2 whitespace-nowrap text-sm uppercase"
+                  href="#"
+                  >Shop</a
+                >
+                <a
+                  class="px-2 py-2 whitespace-nowrap text-sm uppercase"
+                  href="#"
+                  >Checkout</a
+                >
+                <a
+                  class="px-2 py-2 whitespace-nowrap text-sm uppercase"
+                  href="#"
+                  >Cart</a
+                >
+                <a
+                  class="px-2 py-2 whitespace-nowrap text-sm uppercase"
+                  href="#"
+                  >Pricing</a
+                >
+                <a
+                  class="px-2 py-2 whitespace-nowrap text-sm uppercase"
+                  href="#"
+                  >Confirmation</a
+                >
+              </div>
+            </div>
+            <!-- Picture -->
+            <div class="flex flex-col">
+              <div class="w-32 h-32 overflow-hidden pt-4">
+                <img
+                  class="w-full h-full object-cover"
+                  src="./assets/images/img1.webp"
+                  alt="image-one"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BLOGS -->
+      <div class="group relative">
+        <a href="#" class="text-sm font-light uppercase py-2 px-2"
+          ><span>Blog</span></a
+        >
+        <div
+          class="hidden group-hover:flex flex-col absolute left-1/2 transform -translate-x-1/2"
+        >
+          <a class="px-2 py-2 whitespace-nowrap text-sm" href="#">Sub Menu</a>
+          <a class="px-2 py-2 whitespace-nowrap text-sm" href="#">Sub Menu</a>
+          <a class="px-2 py-2 whitespace-nowrap text-sm" href="#">Sub Menu</a>
+          <a class="px-2 py-2 whitespace-nowrap text-sm" href="#">Sub Menu</a>
+        </div>
+      </div>
+
+      <!-- Elements -->
+      <div class="group relative">
+        <a href="#" class="text-sm font-light uppercase px-2 py-2"
+          ><span>Elements</span></a
+        >
+        <div
+          class="hidden group-hover:flex flex-col absolute left-1/2 transform -translate-x-1/2"
+        >
+          <a class="px-2 py-2 whitespace-nowrap text-sm" href="#">Sub Menu</a>
+          <a class="px-2 py-2 whitespace-nowrap text-sm" href="#">Sub Menu</a>
+          <a class="px-2 py-2 whitespace-nowrap text-sm" href="#">Sub Menu</a>
+          <a class="px-2 py-2 whitespace-nowrap text-sm" href="#">Sub Menu</a>
+        </div>
+      </div>
+    </nav>
+    <!-- NAV ENDS -->
+
+    <!-- Product Category Section STARTS  -->
+    <section class="p-20 text-center">
+        <p class="font-bold mb-5 uppercase">product category</p>
+        <div class="grid grid-cols-2 gap-5">
+            <!-- 1x2 grid -->
+            <div>
+                <div class="flex gap-5 justify-between p-10 bg-cyan-500 rounded text-left text-slate-200 mb-2">
+                    <div>
+                        <p>Clothes Sales</p>
+                        <p>Shop New Session Clothing</p>
+                    </div>
+                    <!-- product image -->
+                    <img class="h-80 w-50 object-cover hover:scale-110 transition-all duration-300" src="./assets/images/a1.jpg" alt="a1">
                 </div>
+                <div class="flex gap-5 justify-between p-10 bg-orange-500 rounded text-left text-slate-200">
+                    <div>
+                        <p>Clothes Sales</p>
+                    <p>Shop New Session Clothing</p>
+                    </div>
+                    <!-- product image -->
+                     <img class="h-80 w-50 object-cover hover:scale-110 transition-all duration-300" src="./assets/images/a2.jpg" alt="a2">
                 </div>
-                <!-- Layout -->
-                <div class="flex flex-col">
-                     <span  class="text-sm font-light text-gray-600 border-b border-gray-300 p-2">Layout</span>
-                 <div  class="font-light py-2">
-                    <a class="px-2 py-2 whitespace-nowrap text-sm uppercase" href="#">product details</a>
-                    <a class="px-2 py-2 whitespace-nowrap text-sm uppercase" href="#">shop with sidebar</a>
-                    
-                 </div>
+            </div>
+            <!-- 1x1 Bigger div -->
+            <div class="flex gap-5 justify-between p-10 bg-lime-800 rounded text-left text-slate-200">
+                <div>
+                    <p>Clothes Sales</p>
+                <p>Shop New Session Clothing</p>
                 </div>
-               </div>
+                <!-- product image -->
+                 <img class="h-80 w-50 object-cover hover:scale-110 transition-all duration-300" src="./assets/images/a3.jpg" alt="a3">
             </div>
+
         </div>
-        <!-- Pages -->
-        <div class="group relative">
-            <a href="#" class="text-sm font-light uppercase px-2 py-2"><span>Pages</span></a>
-            <div class="hidden group-hover:flex flex-col absolute">
-                <a  class="px-2 py-2 whitespace-nowrap text-sm" href="#">Sub Menu</a>
-                <a  class="px-2 py-2 whitespace-nowrap text-sm" href="#">Sub Menu</a>
-                <a  class="px-2 py-2 whitespace-nowrap text-sm" href="#">Sub Menu</a>
-                <a  class="px-2 py-2 whitespace-nowrap text-sm" href="#">Sub Menu</a>
-            </div>
-        </div>
-        <!-- Blogs -->
-        <div class="group relative">
-            <a href="#" class="text-sm font-light uppercase py-2 px-2"><span>Blog</span></a>
-            <div class="hidden group-hover:flex flex-col absolute">
-                <a  class="px-2 py-2 whitespace-nowrap text-sm" href="#">Sub Menu</a>
-                <a  class="px-2 py-2 whitespace-nowrap text-sm" href="#">Sub Menu</a>
-                <a  class="px-2 py-2 whitespace-nowrap text-sm" href="#">Sub Menu</a>
-                <a  class="px-2 py-2 whitespace-nowrap text-sm" href="#">Sub Menu</a>
-            </div>
-        </div>
-        <!-- Elements -->
-        <div class="group relative">
-            <a href="#" class="text-sm font-light uppercase px-2 py-2"><span>Elements</span></a>
-            <div class="hidden group-hover:flex flex-col absolute">
-                <a  class="px-2 py-2 whitespace-nowrap text-sm" href="#">Sub Menu</a>
-                <a  class="px-2 py-2 whitespace-nowrap text-sm" href="#">Sub Menu</a>
-                <a  class="px-2 py-2 whitespace-nowrap text-sm" href="#">Sub Menu</a>
-                <a  class="px-2 py-2 whitespace-nowrap text-sm" href="#">Sub Menu</a>
-            </div>
+    </section>
+    <!-- Products Category Section ENDS  -->
+
+    <!-- Newsletter STARTS -->
+    <section class="bg-slate-50 p-20 text-center">
+      <p class="font-semibold uppercase mb-2">subscribe to newsletter</p>
+      <p class="w-2/5 mx-auto mb-2 text-gray-600">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat,
+        facilis numquam impedit ut sequi. Minus facilis vitae excepturi sit
+        laboriosam.
+      </p>
+      <!-- Subscribe Input Email Form -->
+      <div class="flex items-center justify-center w-full mt-4">
+        <input
+          class="border border-slate-900 p-2 px-3 w-1/6"
+          type="email"
+          placeholder="Enter Your Email Address"
+        />
+        <button
+          class="bg-slate-900 text-white p-2 border border-slate-900 px-5"
+        >
+          subscribe now!
+        </button>
+      </div>
+    </section>
+    <!-- Newsletter ENDS -->
+
+    <!-- View Us on instagram section STARTS -->
+    <section class="p-20 text-center border border-orange-500">
+      <span class="uppercase text-base font-semibold"
+        >view us on instagram</span
+      >
+    </section>
+    <!-- View Us on instagram section ENDS -->
+
+    <!-- FOOTER STARTS  -->
+    <footer class="bg-gray-100 p-20">
+      <div class="w-full">
+        <!-- Social Icon Link -->
+        <div class="flex flex-row gap-6 items-center justify-center mb-4">
+          <a href="#"
+            ><img
+              class="w-5 h-5 rounded-full"
+              src="./assets/icons/fb-svg.svg"
+              alt="facebook icon"
+          /></a>
+          <a href="#"
+            ><img
+              class="w-5 h-5 rounded-full"
+              src="./assets/icons/ig-svg.svg"
+              alt="instagram icon"
+          /></a>
+          <a href="#"
+            ><img
+              class="w-5 h-5 rounded-full"
+              src="./assets/icons/twitter-svg.svg"
+              alt="twitter icon"
+          /></a>
+          <a href="#"
+            ><img
+              class="w-5 h-5 rounded-full"
+              src="./assets/icons/pinterest-svg.svg"
+              alt="pinterest icon"
+          /></a>
         </div>
 
-      </nav>
-    
-</body>
+        <!-- Quick Link -->
+        <div
+          class="flex flex-row gap-4 items-center justify-center font-light text-sm mb-2"
+        >
+          <a href="#">CONTACT</a>
+          <a href="#">SHOP</a>
+          <a href="#">PRICING</a>
+          <a href="#">PRIVACY POLICY</a>
+        </div>
+      </div>
+
+      <!-- Copyright slogan -->
+      <div class="flex items-center justify-center font-light text-sm">
+        <p>
+          Copyright &COPY;2026, Designed & Developed by
+          <a class="font-semibold" href="#">RejoanTheme</a>
+        </p>
+      </div>
+    </footer>
+    <!-- FOOTER ENDS -->
+  </body>
 </html>
