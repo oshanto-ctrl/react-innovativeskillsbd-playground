@@ -24,4 +24,7 @@ const expensiveProducts = products.filter((product) => product.price >= 500);
 const unavailableProducts = products.filter((product) => product.inStock===false);
 // console.log("Unavailable Products: ", unavailableProducts);
 
-
+// Search an product in products array
+const searchValue = 'Phone';
+const searchResult = products.filter((product)=>product.name.toLowerCase().includes(searchValue.toLowerCase()));
+console.log(searchResult);
