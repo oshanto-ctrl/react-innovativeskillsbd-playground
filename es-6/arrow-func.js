@@ -47,10 +47,29 @@ const fetchData = async () => {
 
 console.log("Random data = ", await fetchData());
 
+/* 
 
+// Real Life Example 
+class Button {
+    constructor() {
+        this.count = 0;
+    }
 
+    handleClick = () => {
+        this.count++;
+        console.log("Button Clicked ", this.count);
+    };
+}
 
+const button = new Button();
+document.getElementById('myButton').addEventListener('click', button.handleClick);
+*/
 
+// convert a traditional function that return hello, username to arrow func
+const greet = (name) => {
+    return `Hello ${name}!`;
+};
+console.log("\nGreetings: ", greet("Shamim"));
 
 
 
