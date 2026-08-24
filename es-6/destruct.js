@@ -81,4 +81,44 @@ let {address: {state: {article: { topic:topic }}}} = company;
 
 console.log(`Company information: ${name} from ${country} at ${code} state with code: ${pincode} having article on ${topic}`);
 
+console.log("\n\n\n");
+// Destruct practice with arrow function
+let family = {
+    name: "bhuiyan",
+    sumon: {
+        son: "abir",
+    },
+    rubina: {
+        younger_son: "efty",
+        elder_son: {
+            name: "fahim",
+            daughter: {
+                name: "inshirah",
+                toy: "doraemon",
+            },
+        },
+    },
+};
 
+
+const getUpperCased = (info) => info?.toString().toUpperCase() ?? ""; // typeof inof === "string" ? info.toUpperCase() : "";
+
+// Name of the family
+const { name: familyName } = family; 
+console.log(`Introduction to ${getUpperCased(familyName)} Family`)
+
+// Who is sumon's son?
+const { sumon: {son: sumonSon }} = family;
+console.log(`${getUpperCased(sumonSon)} is Sumon's Son.`);
+
+// what is rubina's family name
+const {name : rubinaFamilyName } = family;
+console.log(`Rubina belonged to ${getUpperCased(rubinaFamilyName)} Family.`);
+
+// what is rubina's elder son's daughter's toy
+const { rubina: { elder_son: { daughter: { toy: inshuToy }}}} = family;
+console.log(`Rubina's grand-daughter's favorite toy is ${getUpperCased(inshuToy)}`);
+
+// who is efty
+const {rubina: {younger_son: efty}} = family;
+console.log(`Rubina's Younger Loved Son is ${getUpperCased(efty)} who belongs to ${rubinaFamilyName} Family Surely!`)
