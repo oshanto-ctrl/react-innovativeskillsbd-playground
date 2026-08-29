@@ -79,5 +79,72 @@ fetch("/api/users")
 */
 
 
+/* 
+Why async/await exists
+
+Promise chains work:
+
+fetch("/api/users")
+    .then(resposne => response.json())
+    .then(users => console.log(users))
+    .catch(error => console.error(error));
+
+async/await gives syntax more sequential code look.
+
+async function getUsers() {
+    const response = await fetch("/api/users");
+    const users = await response.json();
+    console.log(users);
+}
+
+await means approximately: wait for this Promise to settle,
+then give me its fulfilled value.
+*/
 
 
+/* 
+    try/catch with async/await
+    async function getUsers() {
+        try {
+            const response = await fetch("/api/users");
+            const users = await response.json();
+            return users;
+        } catch(error) {
+            console.error(error); 
+        }
+    }
+
+
+*/
+
+
+/*
+    HTTP errors and fetch()
+
+    We should check if response is ok. because 
+    const response = await fetch("/api/users");
+    doesn't automatically throws the HTTP statuses 
+    (400/401/403/404/500)
+    
+    we should often check:
+
+    if(!response.ok){
+        throw new Error(`HTTP error: ${response.status}`);
+    }
+*/
+
+async function getUsers() {
+    try {
+        const response = await fetch("/api/users");
+
+        if(!response.ok){
+            throw new Error(`HTTP Error: ${response.status}`);
+        }
+
+        return await response.json();
+
+    } catch(error){
+        console.error("Failed to fetch users: ", error);
+        throw error;
+    }
+}
