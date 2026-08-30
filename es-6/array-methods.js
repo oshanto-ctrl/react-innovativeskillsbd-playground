@@ -84,7 +84,7 @@ console.log("All above 18 in users list? :", allAdults);
 // Distinction: 
 // forEach() -> performs an action
 // map() -> creates a transformed array
-console.log("All username: \n");
+console.log("All username:");
 users.forEach(user => {
     console.log(user.name);
 });
@@ -95,4 +95,43 @@ users.forEach(user => {
 /* reduce() */
 
 // reduce() combines an array into a single accumulated result.
+// reduce(callback, initialValue)
+const numbers = [10, 20, 30];
+const total = numbers.reduce((sum, number)=>sum+number, 0);
+console.log("Total is: ", total);
+// Above example: accumulator is 'sum' and current element is 'number'
+/* 
+process
+initial: 0
+0 + 10 = 10
+10 + 20 = 30
+30 + 30 = 60
+*/
+
+// reduce() with objects
+
+const products = [
+  { name: "Laptop", price: 800 },
+  { name: "Mouse", price: 30 },
+  { name: "Keyboard", price: 70 }
+];
+// Calcuate total product
+const totalPrice = products.reduce((sum, product) => sum + product.price, 0);
+console.log("Total Price is: $", totalPrice);
+
+/* sort() */
+
+// sort an array
+// For numbers (array) remeber the comparator
+const arr = [10, 2, 30, 5];
+arr.sort((a, b) => a - b); // ascending sort 
+console.log("Ascending sort: ", arr);
+
+arr.sort((a, b) => b - a); // descending sort
+console.log("Descending sort: ", arr);
+
+// For Objects:
+// Ascending sort by users age.
+const compUsersByAge = users.sort((a, b) => a.age - b.age)
+console.log(compUsersByAge);
 
