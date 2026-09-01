@@ -135,3 +135,15 @@ console.log("Descending sort: ", arr);
 const compUsersByAge = users.sort((a, b) => a.age - b.age)
 console.log(compUsersByAge);
 
+// Careful measurement needed because
+// sort() mutates the original array
+// in React/state management it's matter a lot.
+// instead of users.sort(...)
+// we create a copy:
+const brr = [3, 2, 3, 1, 500, 101, 1000, -1];
+const sortedBrr = [...brr].sort(
+    (a, b) => a - b
+);
+
+console.log("Org Brr: ", brr);
+console.log("Brr Copied then sort: ", sortedBrr);
