@@ -83,7 +83,44 @@ const ubid = await getUserById(10); // return an object
 
 
 /* Async + map + Promise.all */
+// A practical exercise.
+// API: https://jsonplaceholder.typicode.com/posts
+// retrieve posts from users by their userId
+async function getPosts(userId) {
+   
+    try {
+
+        const response = await fetch(`https://jsonplaceholder.typicode.com/posts?userId=${userId}`);
+
+        if(!response.ok){
+            throw new Error(`HTTP ${response.status}`);
+        }
 
 
+        // Parse and return JSON once
+        const posts = await response.json();
+        return posts;
+
+    } catch(error) {
+        console.error("Posts not found. ", error);
+        throw error;
+    }
+
+}
+
+const users = [
+    {userId: 1},
+    {userId: 2},
+    {userId: 3},
+];
+
+async function getUserPosts(users){
+    return await Promise.all(
+        users.map(user => getPosts(user.userId))
+    );
+}
+
+const posts = await getUserPosts(users);
+console.log(posts);
 
 
