@@ -121,6 +121,6 @@ async function getUserPosts(users){
 }
 
 const posts = await getUserPosts(users);
-console.log(posts);
+// console.log(posts);
 
 
